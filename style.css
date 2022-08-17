@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%
+}
+
+body{
+    font-size:1.6rem;
+    background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+    display: grid;
+    place-items: center;
+
+    height: 100vh;
+}
+ /*screen 1 */
+main{
+    background: #FFFFFF;    
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+
+    padding: 4.8rem 6.4rem 6.4rem;
+    margin-top: -11rem;
+    width: min(42.8rem, 90%);
+}
+
+h1{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 2.44rem;
+    line-height: 2.9rem;
+    text-align: center;
+    color: #34355B;
+    margin-bottom: 1.6rem;
+}
+
+p{
+    font-family: 'DM Sans';
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(52, 53, 91, 0.8);
+    margin-bottom: 4.8rem;
+}
+
+form{
+    width: 12.5rem;
+    height: 5.3rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+input{
+    width: 4.3rem;
+    height: 5.3rem;
+    background: #DCE2E9;
+    border-radius: .4rem 0 0 .4rem;
+    border: none;
+
+    font-family: 'DM Sans';
+    font-weight: 400;
+    line-height: 2.1rem;
+    text-align: center;
+    color: #34355B;
+}
+
+input:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+button{
+    padding: 1.6rem;
+    width: 8.2rem;
+    height: 5.3rem;
+    background: #7879F1;
+    border-radius: 0 .4rem .4rem 0;
+    border: none;
+
+    font-family: 'DM Sans';
+    font-weight: 700;
+    line-height: 2.1rem;
+    color: #FFF;
+    text-align: center;
+    transition: background 300ms;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #6060d8;
+
+}
+
+.hide{
+    display: none;
+}
+
+/* Screen 2 */
+
+.content{
+    display: grid;
+    place-items: center;
+    gap: 3.3rem;
+}
+
+.screen2 h2{
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 150%;
+    color:  #34355B;
+
+    text-align: center;
+
+    
+}
+
+.screen2 button{
+    width: 16.6rem;
+    height: 5.3rem;
+    border-radius: .4rem;
+
+}
