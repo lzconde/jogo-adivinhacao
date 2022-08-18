@@ -1,5 +1,11 @@
+/* Variaveis */ 
 const screen1 = document.querySelector(".screen1")
 const screen2 = document.querySelector(".screen2")
+const btnTry = document.querySelector("#btn-try")
+const btnRefresh = document.querySelector("#btn-refresh")
+let i = 1
+
+/* Callback Functions */ 
 
 const getRandom = () => {
     const min = Math.ceil(1)
@@ -9,19 +15,16 @@ const getRandom = () => {
     return number
 }
 
-let i = 1
 
 const randomNumber = getRandom().toFixed(0)
 
-const handleTryClick = (event) => {
+const handleTryClick = () => {
     event.preventDefault()
-
+    console.log(randomNumber)
     const inputNumber = document.querySelector("#inputNumber")
 
     if(Number(inputNumber.value) == randomNumber){
-        screen1.classList.add("hide")
-        screen2.classList.remove("hide")
-
+        toggleScreen()
         screen2.querySelector("h2").innerText = `Acertou em ${i} tentativas`
     }else{
         inputNumber.value = ""
@@ -35,8 +38,14 @@ const refreshPage = () => {
     location.reload()
 }
 
-const btnTry = document.querySelector("#btn-try")
-const btnRefresh = document.querySelector("#btn-refresh")
+const toggleScreen = () =>  {
+    screen1.classList.toggle("hide")
+    screen2.classList.toggle("hide")
+}
+
+/* Events */ 
+
+/* Events */ 
 
 btnTry.addEventListener("click", handleTryClick)
 btnRefresh.addEventListener("click", refreshPage)
