@@ -65,8 +65,6 @@ const handleTryHard = () => {
         document.querySelector("#tryAgainHard").innerText = "Você errou, tente novamente!"
     }
     i++
-    
-    console.log(randomNumberHard)
 }
 
 const refreshPage = () => {
