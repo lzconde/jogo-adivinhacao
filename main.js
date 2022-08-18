@@ -10,17 +10,16 @@ let i = 1
 const getRandom = () => {
     const min = Math.ceil(1)
     const max = Math.floor(10)
-    let number = Math.random() * (max - min) + min;
+    let number = (Math.random() * (max - min) + min).toFixed(0);
     
     return number
 }
 
 
-const randomNumber = getRandom().toFixed(0)
+const randomNumber = getRandom()
 
 const handleTryClick = () => {
     event.preventDefault()
-    console.log(randomNumber)
     const inputNumber = document.querySelector("#inputNumber")
 
     if(Number(inputNumber.value) == randomNumber){
@@ -49,3 +48,8 @@ const toggleScreen = () =>  {
 
 btnTry.addEventListener("click", handleTryClick)
 btnRefresh.addEventListener("click", refreshPage)
+document.addEventListener("keydown", function(e){
+    if(e.key == "Enter" && screen1.classList.contains("hide")){
+        refreshPage()
+    }
+})
