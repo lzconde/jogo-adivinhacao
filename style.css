@@ -52,6 +52,12 @@ form{
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+
+}
+
+#tryAgain{
+    margin-top: 1.6rem;
+    margin-bottom: 0;
 }
 
 input{
