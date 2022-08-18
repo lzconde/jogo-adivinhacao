@@ -11,17 +11,39 @@
 </head>
 <body>
     <main>
-        <div class="screen1 ">
-            <h1>Jogo da Adivinhação</h1>
-            <p>Adivinhe o numero de 0 a 10</p>
-            <form>
-                <input id="inputNumber" type="text">
-                <button id="btn-try">Tentar</button>
-            </form>
-            <p id="tryAgain"></p>
+        <div class="screen-select ">
+            <div id="select-container">
+                <h1>Jogo da Adivinhação</h1>
+                <p>Selecione a Dificuldade</p>
+                <button class="btn-select-easy">Fácil (Fracote)</button>
+                <button class="btn-select-hard">Dificil (Super Hardcore)</button>
+            </div>
+        </div>
+        <div class="screen-easy hide">
+            <div class="game-container">
+                <h1>Jogo da Adivinhação</h1>
+                <p>Adivinhe o numero de 1 a 10</p>
+                <form name="easy">
+                    <input id="inputNumberEasy" type="text">
+                    <button class="btn-try-easy">Tentar</button>
+                </form>
+                <p id="tryAgainEasy"></p>
+            </div>
         </div>
 
-        <div class="screen2 hide">
+        <div class="screen-hard hide">
+            <div class="game-container">
+                <h1>Jogo da Adivinhação</h1>
+                <p>Adivinhe o numero de 1 a 50</p>
+                <form name="hard">
+                    <input id="inputNumberHard" type="text">
+                    <button class="btn-try-hard">Tentar</button>
+                </form>
+                <p id="tryAgainHard"></p>
+            </div>
+        </div>
+
+        <div class="screen-result hide">
             <div class="content">
                 <h2>Acertou em 3 tentativas</h2>
                 <button id="btn-refresh">Jogar Novamente!</button>
